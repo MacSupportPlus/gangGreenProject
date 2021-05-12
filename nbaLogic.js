@@ -11,3 +11,4 @@ fetch("https://api-basketball.p.rapidapi.com/standings/groups?season=2019-2020&l
 .catch(err => {
 	console.error(err);
 });
+
