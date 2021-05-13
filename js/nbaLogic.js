@@ -1,5 +1,4 @@
-
-
+// player Logic
 for (let index = 1; index <= 20; index++){
 	fetch(`https://free-nba.p.rapidapi.com/players?per_page=25&page=0${index}`, {
 		"method": "GET",
