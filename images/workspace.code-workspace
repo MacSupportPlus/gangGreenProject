@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"name": "API",
+			"path": "../../../API"
+		},
+		{
+			"name": "gameofthrones",
+			"path": "../../../gameofthrones"
+		},
+		{
+			"name": "weatherapp",
+			"path": "../../../API/weatherapp"
+		},
+		{
+			"name": "breaking-bad",
+			"path": "../../../breaking-bad"
+		},
+		{
+			"path": "../../../projecttest"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "nbaproj"
+	}
+}
