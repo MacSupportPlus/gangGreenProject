@@ -1,14 +1,21 @@
-fetch("https://api-basketball.p.rapidapi.com/standings/groups?season=2019-2020&league=3", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "eb2f99bc89msh5ddb3ef01b4cb06p19f493jsn25b29d062ef5",
-		"x-rapidapi-host": "api-basketball.p.rapidapi.com"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+
+
+for (let index = 1; index <= 20; index++){
+	fetch(`https://free-nba.p.rapidapi.com/players?per_page=25&page=0${index}`, {
+		"method": "GET",
+		"headers": {
+			"x-rapidapi-key": "bd5ccc67e0msh4698b4ba2aa93dap19bf2djsnc4fab986bf8f",
+			"x-rapidapi-host": "free-nba.p.rapidapi.com"
+		}
+	})
+	.then(response => response.json()) 
+	.then(athlete =>{
+		console.log(athlete)
+		// let players = athlete.data;
+		// console.log(players);
+	})
+	.catch(err => {
+		console.error(err);
+	});
+}
 
