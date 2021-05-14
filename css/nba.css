@@ -19,7 +19,7 @@ iframe {
 }
 
 body{
-    background-image: url("images/court.jpeg");
+    background-image: url("../images/court.jpeg");
     background-repeat: no-repeat;
     background-size: cover ;
 }
