@@ -30,19 +30,16 @@
 // 	console.error(err);
 // });
 
-const data = null;
-
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
+fetch("https://api-nba-v1.p.rapidapi.com/standings/standard/2019/conference/east", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "bd5ccc67e0msh4698b4ba2aa93dap19bf2djsnc4fab986bf8f",
+		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com"
 	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
 });
-
-xhr.open("GET", "https://api-nba-v1.p.rapidapi.com/teams/teamId/1");
-xhr.setRequestHeader("x-rapidapi-key", "bd5ccc67e0msh4698b4ba2aa93dap19bf2djsnc4fab986bf8f");
-xhr.setRequestHeader("x-rapidapi-host", "api-nba-v1.p.rapidapi.com");
-
-xhr.send(data);
