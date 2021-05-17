@@ -125,6 +125,23 @@
 // getNames();
 // console.log(pageNumber)
 
+// const data = null;
+
+// const xhr = new XMLHttpRequest();
+// xhr.withCredentials = true;
+
+// xhr.addEventListener("readystatechange", function () {
+// 	if (this.readyState === this.DONE) {
+// 		console.log(this.responseText);
+// 	}
+// });
+
+// xhr.open("GET", "https://api-nba-v1.p.rapidapi.com/players/teamId/6");
+// xhr.setRequestHeader("x-rapidapi-key", "bd5ccc67e0msh4698b4ba2aa93dap19bf2djsnc4fab986bf8f",);
+// xhr.setRequestHeader("x-rapidapi-host", "api-nba-v1.p.rapidapi.com");
+
+// xhr.send(data);
+//
 const data = null;
 
 const xhr = new XMLHttpRequest();
@@ -132,13 +149,18 @@ xhr.withCredentials = true;
 
 xhr.addEventListener("readystatechange", function () {
 	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
+		//console.log(JSON.parse(this.responseText));
+		let playerObj = (JSON.parse(this.responseText));
+		console.log(playerObj)
+
 	}
 });
 
-xhr.open("GET", "https://api-nba-v1.p.rapidapi.com/players/teamId/6");
-xhr.setRequestHeader("x-rapidapi-key", "bd5ccc67e0msh4698b4ba2aa93dap19bf2djsnc4fab986bf8f",);
+xhr.open("GET", "https://api-nba-v1.p.rapidapi.com/players/league/standard");
+xhr.setRequestHeader("x-rapidapi-key", "bd5ccc67e0msh4698b4ba2aa93dap19bf2djsnc4fab986bf8f");
 xhr.setRequestHeader("x-rapidapi-host", "api-nba-v1.p.rapidapi.com");
 
 xhr.send(data);
-let playerObjects= JSON.parse(data);
+//var playerObj = JSON.parse(data)
+//console.log(playerObj)
+//console.log(playerObj.api)
