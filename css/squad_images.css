@@ -1,0 +1,23 @@
+body{
+    background: black;
+    margin: 0;
+}
+.container{
+    height: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container img{
+    border: 1px solid #2193b0;
+    padding: 0px; 
+    border-radius: 50%;
+    transition: .5%;
+    width: 100px;
+    height: 100px;
+}
+.container img:hover{
+    box-shadow: 0px 0px 20px #2193b0;
+}
+
