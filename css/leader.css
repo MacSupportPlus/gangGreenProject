@@ -89,7 +89,9 @@ body {
 
 
   .leaderboard {
+
     max-width: 50rem;
+
     margin: 5rem auto;
     border-radius: 1rem;
     box-shadow: 2px 2px 16px 1px #aaa;
@@ -123,7 +125,7 @@ body {
     height: 16rem;
     position: absolute;
     bottom: 0;
-    right: -1rem;
+    right: 2rem;
 }
 
 .fans{
@@ -235,7 +237,7 @@ body {
   }
   
   .nick {
-    text-align: center;
+    text-align: left;
   }
   
   .rank,
