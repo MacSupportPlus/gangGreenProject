@@ -86,7 +86,13 @@ body {
   background-image: url(https://images.unsplash.com/photo-1548346941-0f485f3ec808?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHN0YXJyeSUyMHNreXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60);
 }
   .leaderboard {
+<<<<<<< HEAD
     max-width: 50rem;
+=======
+
+    max-width: 50rem;
+
+>>>>>>> main
     margin: 5rem auto;
     border-radius: 1rem;
     box-shadow: 2px 2px 16px 1px #aaa;
@@ -120,7 +126,7 @@ body {
     height: 16rem;
     position: absolute;
     bottom: 0;
-    right: -1rem;
+    right: 2rem;
 }
 
 .fans{
@@ -232,7 +238,7 @@ body {
   }
   
   .nick {
-    text-align: center;
+    text-align: left;
   }
   
   .rank,
