@@ -184,9 +184,30 @@ xhr.addEventListener("readystatechange", function () {
 	// 	  }
 		  
 	// 	  console.log(filterItems(playerList, 'anthony'))  // ['apple', 'grapes']
+	// let container = document.getElementById('eventcontainer')
+	
+	
+// 	let container = document.getElementById("eventContainer");
+// //li id="4"
+// container.addEventListener("click", (e) => {
+//   let teamID = e.target.id;
+//   localStorage.teamID = e.target.id;
+//   window.location.href = "/events.html";
+// });
+// //new api call
+// //new query to display detailed information
+// function showDetails(){
+//     //make onload event so that function gets called when page loads
+//     //<body onload="showDetails()">
+//         //next page
+// let teamID = localStorage.teamID;
+//     //query inside of your array
+//     //show details on html page
+// }
+// 		}
+// 	}
 		
-		
-	 }
+	}
 });
 
 xhr.open("GET", "https://api-nba-v1.p.rapidapi.com/players/league/standard");
