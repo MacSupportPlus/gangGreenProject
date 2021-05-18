@@ -119,25 +119,26 @@ box-sizing: border-box;
   
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-
   box-sizing: border-box;
 }
 
 .events ul{
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   margin: 0;
   padding: 40px;
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 
-.events ul li{
+.events li{
   list-style: none;
   background: #ffff;
   box-sizing: border-box;
   height: 200px;
   margin: 15px 0;
+  overflow-y: scroll;
 }
 
 .events .time{
