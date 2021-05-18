@@ -17,32 +17,7 @@ body {
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/* body{
-  height:100vh;
-  display:flex;
-  flex-direction:row-reverse;
-  justify-content:left;
-  align-items:flex-start;
-  font-family: 'Roboto', sans-serif;
-} */
-
-/* h2{
-  margin:10px;
-  text-transform: uppercase;
-}
-
-h6{
-  margin:0px;
-  color:rgb(12, 10, 10);
-} */
-
-/* .wrapper{
-  text-align:inherit;
-  margin:top;
-  position: top;
- 
-} */
-
+/* NavBar Styling  */
 .tabs{
   margin-top:50px;
   font-size:15px;
@@ -91,19 +66,25 @@ h6{
   background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
 }
+/* end Navbar styling  */
+
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
 .column {
+    display: flex;
+    /* flex-direction: row-reverse; */
     margin: auto;
     /* background-color: ivory; */
-    float: left;
-    max-height: 100%;
+    /* float: left; */
+    /* max-height: 100%; */
     max-width: 50%;
-    flex: auto;
+    /* flex: auto; */
+    /* -ms-flex-align: stretch; */
 
-  }
+}
 
-  h1{
+h1{
     /* padding: 10px; */
     margin:auto;
     margin-top: 50px;
@@ -116,61 +97,65 @@ h6{
   h2{
     padding: 10px;
     color: whitesmoke;
+    font-variant: small-caps;
     letter-spacing: 5px;
     font-family: Helvetica;
   }
   
   /* Clear floats after the columns */
   .row:after {
-    content: "";
-    display:table;
+    /* content: ""; */
+    display:flex;
     clear:right;
   }
 #cardbox{
+    display: flex;
     border-radius: 10px;
     max-width: 100%;
-    height: 500px;
+    max-height: 100%;
+    height: 450px;
     background: rgba(0, 0, 0, 0.7);
 
     margin: auto;
-    margin-top: 30px;
-    align-items: flex-start;
-    /* margin-top: 25px; */
+    margin-top: 25px;
+    /* align-items: flex-start; */
+    margin-bottom: 35px;
 }
-#cardbox2{
-    width: 100%;
 
-    align-items: flex-start;
-    margin: auto;
-    /* justify-content: center; */
- 
-}
+
 .cardImg{
-  height: 90%;
+    /* display: flex; */
+    height: 90%;
+  /* background-color: cadetblue; */
+  /* margin-left: auto; */
+
 
 }
 
 #logo {
-    height: 140%;
+    height: 150%;
+    margin-top: -50px;
+    margin-left: 10px;;
+    /* margin-top: auto; */
+    margin-bottom: auto;
+}
 
-    /* margin-left: 150px; */
-   /* align-items: center; */
+#players{
+    /* margin: auto; */
+    margin-top: 100px;
+
 }
-#logo .flip-card-back{
-    margin-left: 1px;
-  /* background-color: black; */
-  /* background: rgba(0, 0, 0, 0.7); */
-  color: dodgerblue;
-  transform: rotateY(180deg);
-}
+
 .flip-card {
-  /* background-color: transparent; */
+  background-color: transparent;
   justify-self: self-start;
   width: 300px;
   height: 300px;
   /* border: 1px solid #f1f1f1; */
-  perspective: 1000px; 
-  /*Remove this if you don't want the 3D effect*/
+  /* margin: auto ; */
+  /* margin-top: -40px; */
+  /* padding: auto; */
+  /* margin-left: -20px; */
 }
 
 /* This container is needed to position the front and back side */
@@ -202,12 +187,14 @@ h6{
   /* background-image: url("/gan/gGreenProject/images/celtics logo.png"); */
   background-position: center;
   color: black;
+  /* margin-left: -10px; */
+
 }
 
 /* Style the back side */
 .flip-card-back {
-  margin-left: 40px;
-  /* background-color: black; */
+  /* margin-left: 40px; */
+  /* background-color: black;x */
   /* background: rgba(0, 0, 0, 0.7); */
   color: dodgerblue;
   transform: rotateY(180deg);
