@@ -1,45 +1,41 @@
-// for (let index = 1; index <= 50; index++){
-// 	fetch("https://api-nba-v1.p.rapidapi.com/", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-key": "bd5ccc67e0msh4698b4ba2aa93dap19bf2djsnc4fab986bf8f",
-// 		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com"
-// 	}
-// })
-// .then(response => response.json()) 
-// .then(athlete => {
-// console.log(athlete);
-// })
+const data = null;
 
-// .catch(err => {
-// 	console.error(err);
-// });
-// }
+[{}, {}, {}]
+// index in the array
+let games = [{
+   
+	gameId:1,
+    date: "May 18th, 2021",
+    team1ID: 41,
+    teame2ID: 15,
 
-// fetch("https://api-nba-v1.p.rapidapi.com/players/league/standard", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-key": "bd5ccc67e0msh4698b4ba2aa93dap19bf2djsnc4fab986bf8f",
-// 		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com"
-// 	}
-// })
-// .then(response => {
-// 	console.log(response);
-// })
-// .catch(err => {
-// 	console.error(err);
-// });
+	gameId:2,
+	date "May 18th, 2021",
+	teamId:11,
+	teame2ID:17
 
-fetch("https://api-nba-v1.p.rapidapi.com/standings/standard/2019/conference/east", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "bd5ccc67e0msh4698b4ba2aa93dap19bf2djsnc4fab986bf8f",
-		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+	date "May 18, 2021"
+	team1ID:
+	
+}
+]
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+        console.log(JSON.parse(this.responseText));
+        let playerObj = (JSON.parse(this.responseText));
+        let index = 0
+        let playerList = []
+        let allStarsWest = [135, 381, 1267, 524, 264, 125, 547, 123, 313, 188, 143, 431, 382, 278, 318, 346, 414, 63, 191, 839]
+        let allStarsEast = [1486, 226, 462, 316, 543, 44, 537, 881, 85, 723, 19, 360, 440, 455, 760, 1045, 152, 260, 158, 480]
+        for (index = 0; index < playerObj.api.players.length; index++) {
+            playerList.push(playerObj.api.players[index])
+        }
+        console.log(playerList)
+        function displayTeams(player){
+            newPlayer1 = player
+            console.log(newPlayer1.firstName)
+        }
+        displayTeams(playerList[135])
