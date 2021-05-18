@@ -151,9 +151,42 @@ xhr.addEventListener("readystatechange", function () {
 	if (this.readyState === this.DONE) {
 		//console.log(JSON.parse(this.responseText));
 		let playerObj = (JSON.parse(this.responseText));
-		console.log(playerObj)
+		let index = 0
+		let playerList = []
+		let allStarsWest = [135, 381, 1267, 524, 264, 125, 547, 123, 313, 188, 143, 431, 382, 278, 318, 346, 414, 63, 191, 839]
+		let allStarsEast = [1486, 226, 462, 316, 543, 44, 537, 881, 85, 723, 19, 360, 440, 455, 760, 1045, 152, 260, 158, 480]
+		for (index = 0; index < playerObj.api.players.length; index++) {
+			playerList.push(playerObj.api.players[index])
+		}
+		console.log(playerList)
+		function displayTeams(player){
+			newPlayer1 = player 
+			console.log(newPlayer1.firstName)
+			
 
-	}
+		}
+
+		displayTeams(playerList[135])
+		
+		window.addEventListener('DOMContentLoaded', function() {
+			let playerCard = query.querySelector('.flip-card');
+			let playerCardImg = query.querySelector('.flip-card-front');
+			let playerCardInfo = query.querySelector('.flip-card-back');
+			let playerCardName = query.querySelector('h1');
+			// let playerCardInfo = query.querySelector('p');
+
+			
+		})
+	// 	function filterItems(arr, query) {
+	// 		return arr.filter(function(el) {
+	// 			return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+	// 		})
+	// 	  }
+		  
+	// 	  console.log(filterItems(playerList, 'anthony'))  // ['apple', 'grapes']
+		
+		
+	 }
 });
 
 xhr.open("GET", "https://api-nba-v1.p.rapidapi.com/players/league/standard");

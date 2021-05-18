@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+img{
+    height: 50%;
+    width: 50%;
+}
+
+
+.leftbox{
+height: 100%;
+
+padding: 50px;
+box-sizing: border-box;
+}
+
+.leftbox .content{
+    color: white;
+    background: rgba(0,0,0,0.5);
+    transition: .5s;
+}
+
+.leftbox .content :hover{
+    background: #e91e63;
+}
+
+.leftbox .content h1{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.leftbox .content p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.events{
+    
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    box-sizing: border-box;
+}
+
+.events ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.events ul li{
+    list-style: none;
+    background: #ffff;
+    box-sizing: border-box;
+    height: 200px;
+    margin: 15px 0;
+}
+
+.events .time{
+    position: relative;
+    padding: 20px;
+    background: #262626;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    transition: 5s;
+}
+
+.events .time:hover{
+    background: #e91e63;
+}
+
+.events .time h2{
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffff;
+    font-size: 60px;
+}
+
+.events .time h2 span{
+    font-size: 30px;
+}
+
+.events .details{
+    padding: 20px;
+    background: #ffff;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+.events .details h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+.events .details h3 p{
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.events .details h3 a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border: 2px solid #262626;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: .5s;
+    float: right;
+}
+
+.events .details a:hover{
+    background: #e91e63;
+    color: #ffff;
+    border-color: #e91e63;
+}
+
