@@ -1,5 +1,4 @@
 body {
-
     height: 100vh;
     justify-content: center;
     flex-direction: column;
@@ -10,11 +9,7 @@ body {
     background-size: cover;
     opacity: 300px;
 
-}
-
-
-
-
+} 
 
 .tabs{
 margin-top:50px;
@@ -59,10 +54,15 @@ margin-right:5px;
   background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
   background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
   background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
+  filter:hue-rotate()( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1);
 }
 
-
+.containerHeight{
+  height: 600px;
+  margin: 2%;
+  overflow:hidden;
+  
+} 
 
 img{
   height: 100%;
@@ -75,6 +75,7 @@ img{
 height: 100%;
 padding: 50px;
 box-sizing: border-box;
+text-align: center;
 }
 
 
@@ -101,28 +102,31 @@ box-sizing: border-box;
 }
 
 .events{
-  
-  height: 100%;
+  margin: -1%;
+  padding-top: 70%; 
+  height: 100px;
   background: rgba(0, 0, 0, 0.5);
-
   box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: scroll; 
 }
 
 .events ul{
-  position: absolute;
-  top: 50%;
+  /* position: fixed;  */
+  /* top: 100px; */
   transform: translateY(-50%);
   margin: 0;
   padding: 40px;
   box-sizing: border-box;
+  /* overflow-y: scroll;  */
 }
 
 .events ul li{
   list-style: none;
-  background: #ffff;
+  background:#ffff;
   box-sizing: border-box;
   height: 200px;
-  margin: 15px 0;
+  margin: 14px 0;
 }
 
 .events .time{
@@ -180,7 +184,7 @@ box-sizing: border-box;
 }
 
 .events .details a{
-  display: inline-block; 
+  /* display: inline-block;  */
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px 15px;
