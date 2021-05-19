@@ -1,3 +1,13 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-image: url(https://images.unsplash.com/photo-1564801720666-83b2d7a3de73?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3RhcnJ5JTIwc2t5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60);
+  /* background-repeat: no-repeat;
+  background: fill; */
+  background-size: cover;
+}
 .leaderboard {
     max-width: 50rem;
     margin: 5rem auto;
@@ -149,7 +159,7 @@ nav a:first-child {
   td {
     padding: 1rem 1rem;
   }
-.tabs{
+  .tabs{
     margin-top:50px;
     font-size:15px;
     padding:0px;
@@ -161,7 +171,7 @@ nav a:first-child {
     position: relative;
     left: 150px;
     text-align: center;
-  }
+}
   .tabs a{
     text-decoration:none;
     color: #777;
