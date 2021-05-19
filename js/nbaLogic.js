@@ -5,6 +5,7 @@ let allStarList = [136, 382, 1268, 525, 265, 126, 548, 124, 314, 189, 144, 432, 
 
 /*
 [{}, {}, {}]
+
 // index in the array */
 
 let games = [{
@@ -27,6 +28,7 @@ let games = [{
 
 
 
+
 let teamID = [1, 2, 4, 5, 8, 9, 11, 15, 16, 17, 19, 20, 21, 24, 27, 28, 29, 30,40,41];
 
 
@@ -40,6 +42,7 @@ function getPlayers(){
 
 
 xhr.addEventListener("readystatechange", function () {
+
 	if (this.readyState === this.DONE) {
 		//console.log(JSON.parse(this.responseText));
 		let playerObj = (JSON.parse(this.responseText));

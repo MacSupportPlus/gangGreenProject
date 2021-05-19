@@ -20,16 +20,16 @@ body {
     font-family: 'Shadows Into Light', cursive;
 }
 .wrapper {
-    margin-top: 10%;
-    /* margin: 0 auto;
-    padding: 0 3rem;
-    margin-top: 4rem;
-    text-align: justify; */
+    /* margin-top: -6px; */
+    margin: 2px; 
+    padding: 0 9rem;
+    margin-top: 4rem; 
+    text-align: justify;  
 }
 .wrapper h1{
     font-size: 52px;
     color:aliceblue;
-    margin-bottom: 60px;
+    margin-bottom: 26px;
     text-align: center;
 }
 
@@ -62,8 +62,7 @@ body {
     color:aliceblue;
 }
 .container{
-    height: 100vh;
-    
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
