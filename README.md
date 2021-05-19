@@ -52,7 +52,7 @@ xhr.addEventListener("readystatechange", function () {
 ## Challenges Faced
 <hr>
 We had trouble with using the format fetch to retrieve our API call so we had to learn how to use the Xmlhttprequest call to make our api call. 
-By using this we had to learn how to make the call and return it to a JSON package to make our players display. 
+By using this we had to learn how to make the call and return the JSON package (strings) and convert them to a set of player list objects to make our players display. 
 In all this was a good chanllenge for us as a team. 
 <br>
 <br>
