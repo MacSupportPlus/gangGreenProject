@@ -1,39 +1,23 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-  }
-
-body {
-  background-image: url(https://images.unsplash.com/photo-1548346941-0f485f3ec808?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHN0YXJyeSUyMHNreXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60);
-  background-image: cover;
-}
-
-
-  .leaderboard {
+.leaderboard {
     max-width: 50rem;
     margin: 5rem auto;
     border-radius: 1rem;
     box-shadow: 2px 2px 16px 1px #aaa;
     font-family: sans-serif;
   }
-  
   a {
     text-decoration: none;
     color: inherit;
   }
-  
   header {
     background-color: blue;
     color: white;
     text-transform: uppercase;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    height: 12rem;
+    height: 10rem;
     position: relative;
   }
-  
   h1 {
     font-size: 3rem;
     line-height: 3rem;
@@ -41,47 +25,43 @@ body {
     margin-left: 3rem;
     top: 4rem;
   }
-  
   img {
-    height: 16rem;
+    height: 20rem;
     position: absolute;
     bottom: 0;
     right: 2rem;
 }
-
 .fans{
     height: 7vh;
     right: 52rem;
-    top: 22rem;
+    top: 24rem;
     padding-bottom: 1em;
     display: block;
 }
 .fans2{
     height: 5vh;
     right: 52rem;
-    top: 25.5rem;
+    top: 27rem;
     display: block;
     /* padding-bottom: 1em;
     padding-right: -2%; */
 }
-
 .fans3{
   height: 5vh;
   right: 52rem;
-  top: 29rem;
+  top: 30rem;
   /* bottom: 10%; */
     /*padding-right: -2%; */
 }
-
 .fans4{
   height: 5vh;
   right: 52rem;
-  top: 32rem;
+  /* top: rem; */
 }
 .fans5{
   height: 5vh;
   right: 52rem;
-  /* top: 29rem; */
+  bottom: -3rem;
   border-radius: 50%;
 }
 .fans6{
@@ -89,15 +69,14 @@ body {
   right: 52rem;
   border-top-style: inherit;
   border-radius: 50%;
-  bottom: -3rem;
+  bottom: -6.5rem;
 }
 .fans7{
   height: 5vh;
   right: 52rem;
-  bottom: -6rem;
+  bottom: -9.5rem;
   border-radius: 50%;
 }
-  
 nav {
     width: 550%;
     /* position:relative; */
@@ -111,28 +90,23 @@ nav {
     );
     height: 200%;
   }
-  
 nav a {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
     display: inline-block;
     font-weight: bold;
   }
-  
 nav a.active {
-    border-bottom: 4px solid #f0a900;
+    border-bottom: 4px solid #F0A900;
   }
-  
 nav a:first-child {
     margin-left: 3rem;
   }
-  
-nav a + a {
+/* nav a + a {
     margin-left: 1rem;
-  }
-  
+  } */
   table {
-    background-color: #16181e;
+    background-color: #16181E;
     color: #999;
     width: 100%;
     border-collapse: collapse;
@@ -140,52 +114,42 @@ nav a + a {
     border-bottom-right-radius: 1rem;
     overflow: hidden;
   }
-  
   thead {
     font-size: 0.7rem;
     color: #555;
     text-transform: uppercase;
   }
-  
   tbody .nick {
     color: white;
     font-weight: bold;
     font-size: 0.9rem;
   }
-  
   tbody tr:nth-child(2n) {
-    background-color: #1f232c;
+    background-color: #1F232C;
   }
-  
   .nick {
     text-align: left;
   }
-  
   .rank,
   .sp,
   .kd {
     text-align: right;
   }
-  
   .rank {
     width: 3ch;
     padding-left: 1rem;
   }
-  
   .sp,
   .kd {
     width: 8ch;
   }
-  
   th {
     padding: 1.4rem 1rem 0.5rem;
   }
-  
   td {
     padding: 1rem 1rem;
   }
-
-  tabs{
+.tabs{
     margin-top:50px;
     font-size:15px;
     padding:0px;
@@ -193,9 +157,11 @@ nav a + a {
     background:#fff;
     box-shadow:0px 5px 20px rgba(0,0,0,0.1);
     border-radius:50px;
-    width: 100%;
+    width: 75%;
+    position: relative;
+    left: 150px;
+    text-align: center;
   }
-  
   .tabs a{
     text-decoration:none;
     color: #777;
@@ -206,15 +172,12 @@ nav a + a {
     z-index:1;
     transition-duration:0.6s;
   }
-  
   .tabs a.active{
     color:#fff;
   }
-  
   .tabs a i{
     margin-right:5px;
   }
-  
   .tabs .selector{
     height:100%;
     display:inline-block;
@@ -225,13 +188,9 @@ nav a + a {
     border-radius:50px;
     transition-duration:0.6s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
-    background: #05abe0;
-    background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
-    background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
-    background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
-    filter:hue-rotate()( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1);
+    background: #05ABE0;
+    background: -moz-linear-gradient(45deg, #05ABE0 0%, #8200F4 100%);
+    background: -webkit-linear-gradient(45deg, #05ABE0 0%,#8200F4 100%);
+    background: linear-gradient(45deg, #05ABE0 0%,#8200F4 100%);
+    filter:hue-rotate()( startColorstr='#05ABE0', endColorstr='#8200F4',GradientType=1);
   }
-  
-  /* #1f232c */
-  
