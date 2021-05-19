@@ -1,8 +1,24 @@
 
 const data = null;
+var cardNewImage1 = document.querySelector(".cardImg1");
+var cardNewImage2 = document.querySelector(".cardImg2");
+var cardNewImage3 = document.querySelector(".cardImg3");
+var cardNewImage4 = document.querySelector(".cardImg4");
+var cardNewLogo1 = document.querySelector(".logo1");
+var cardNewLogo2 = document.querySelector(".logo2");
+var cardNewName1 = document.querySelector(".player1name");
+var cardNewName2 = document.querySelector(".player2name");
+var cardNewName3 = document.querySelector(".player3name");
+var cardNewName4 = document.querySelector(".player4name");
+var cardNewCollege1 = document.querySelector(".player1College");
+var cardNewCollege2 = document.querySelector(".player2College");
+var cardNewCollege3 = document.querySelector(".player3College");
+var cardNewCollege4 = document.querySelector(".player4College");
 let playerList = []
-let allStarList = [136, 382, 1268, 525, 265, 126, 548, 124, 314, 189, 144, 432, 383, 279, 319, 347, 415, 64, 192, 840, 1487, 227, 463, 317, 544, 45, 538, 882, 86, 724, 20, 361, 441, 456, 761, 1046, 153, 261, 159, 481]
-
+let allStarList = [136, 382, 525, 265, 126, 548, 124, 314, 189, 215, 432, 383, 279, 319, 347, 415, 64, 192, 840, 1487, 227, 463, 71, 544, 45, 538, 882, 86, 724, 20, 361, 441, 456, 761, 1046, 153, 261, 159, 481, 458]
+console.log(allStarList);
+var stars1 = [{}]
+var stars2 = [{}]
 /*
 [{}, {}, {}]
 
@@ -21,7 +37,44 @@ let games = [{
 	date: "May 18th, 2021",
 	id1: 11,
 	id2: 17
+},
+{
+	gameID: 3,
+	date: "May 18th, 2021",
+	id1: 16,
+	id2: 8
+},
+{
+	gameID: 4,
+	date: "May 18th, 2021",
+	id1: 9,
+	id2: 29
+},
+{
+	gameID: 5,
+	date: "May 18th, 2021",
+	id1: 21,
+	id2: 20
+},
+{
+	gameID: 6,
+	date: "May 18th, 2021",
+	id1: 24,
+	id2: 1
+},
+{
+	gameID: 7,
+	date: "May 18th, 2021",
+	id1: 11,
+	id2: 17
+},
+{
+	gameID: 8,
+	date: "May 18th, 2021",
+	id1: 2,
+	id2: 5
 }
+
 
 ]
 
@@ -34,6 +87,8 @@ let teamID = [1, 2, 4, 5, 8, 9, 11, 15, 16, 17, 19, 20, 21, 24, 27, 28, 29, 30,4
 
 (()=>{
 
+
+		
 
 const xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
@@ -52,8 +107,9 @@ xhr.addEventListener("readystatechange", function () {
 		
 		for (index = 0; index < playerObj.api.players.length; index++) {
 			playerList.push(playerObj.api.players[index])
+			
 		}
-		console.log(playerList[135].teamId)
+		console.log(playerList)
 
 		displayDetails();
 
@@ -167,11 +223,12 @@ function displayDetails(){
 		return playerObj.teamId == team1ID  
 	})
 
+
 	//loop through player list
 	
 	
 	let stars1 = team1PlayerList.filter(player =>{
-
+	
 		try{
 			
 		return allStarList.includes(parseInt(player.playerId));
@@ -180,9 +237,26 @@ function displayDetails(){
 			return false;
 		}
 	})
+	console.log(stars1)
 
-	console.log("stars", stars1);
-
+	let lilTeam1Players= stars1.map((player)=> { 
+		return `images/nba stars/${player.playerId}.png>`
+		
+	
+	
+	})
+	console.log(stars1[1].playerId)
+	cardNewLogo1.src = `images/teams/${stars1[0].teamId}.png`;
+	cardNewImage1.src = `images/nba stars/${stars1[0].playerId}.png`;
+	cardNewImage2.src = `images/nba stars/${stars1[1].playerId}.png`;
+	cardNewName1.innerHTML = `${stars1[0].firstName} ${stars1[0].lastName}`
+	cardNewName2.innerHTML = `${stars1[1].firstName} ${stars1[1].lastName}`
+	cardNewCollege1.innerHTML = `College: ${stars1[0].collegeName}`
+	cardNewCollege2.innerHTML = `College: ${stars1[1].collegeName}`
+	console.log(cardNewName2);
+	console.log(cardNewLogo1)
+	console.log(cardNewImage1)
+	console.log(cardNewImage2)
 
 	//loop through and find all players for teamid2 and store in plyaers2
 	let team2PlayersList = []
@@ -193,6 +267,7 @@ function displayDetails(){
 	})
 
 	let stars2 = team2PlayerList.filter(player =>{
+		
 		try{
 			
 		return allStarList.includes(parseInt(player.playerId));
@@ -200,16 +275,46 @@ function displayDetails(){
 		catch{
 			return false;
 		}
+		
+
+
 	})
+	console.log(stars2)
+	
+	
+	
+	// for (i = 0; i < stars2.length; i++){
+	let lilTeam2Players= stars2.map((player)=> { 
+		return `images/nba stars/${player.playerId}.png>`
+	})
+	console.log(stars2[1])
+	cardNewLogo2.src = `images/teams/${stars2[1].teamId}.png`;
+
+	cardNewImage3.src = `images/nba stars/${stars2[0].playerId}.png`;
+	cardNewImage4.src = `images/nba stars/${stars2[1].playerId}.png`;
+	cardNewName3.innerHTML = `${stars2[0].firstName} ${stars2[0].lastName}`
+	cardNewName4.innerHTML = `${stars2[1].firstName} ${stars2[1].lastName}`
+	cardNewCollege3.innerHTML = `College: ${stars2[0].collegeName}`
+	cardNewCollege4.innerHTML = `College: ${stars2[1].collegeName}`
+	console.log(cardNewLogo2)
+	console.log(cardNewImage3)
+	console.log(cardNewImage4)
+	//cardNewImage.innerHTML(lilTeam2Players.join(''));
 
 	console.log("stars", stars2);
+	console.log(stars2)
+	console.log(stars2[i].playerId);
 
 
-	console.log(team1PlayerList);
 	console.log(team2PlayerList);
+	
 
+		
+	
 }
-
 getPlayers();
+
+
+
 })()
 
