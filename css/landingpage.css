@@ -5,9 +5,8 @@
     min-width: 100%;
     min-height: 100%;
     pointer-events: none;
-  }
-  
-  .button{
+}
+.button {
     color: whitesmoke;
     font: bold 11px Helvetica;
   text-decoration:dodgerblue;
@@ -18,9 +17,12 @@
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
     
-  }
-  
-  #textLayer{
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+}
 
-  }
+#textLayer{
+    color: whitesmoke;
+    letter-spacing: 5px;
+    font-family: Helvetica;
+    font-style: oblique ;
+    font-weight: bolder;
+}
