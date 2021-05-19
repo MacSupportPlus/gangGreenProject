@@ -10,12 +10,14 @@ var cardNewName1 = document.querySelector(".player1name");
 var cardNewName2 = document.querySelector(".player2name");
 var cardNewName3 = document.querySelector(".player3name");
 var cardNewName4 = document.querySelector(".player4name");
+var voteNewName1 = document.querySelector(".player1vote");
+var voteNewName2 = document.querySelector(".player2vote");
 var cardNewCollege1 = document.querySelector(".player1College");
 var cardNewCollege2 = document.querySelector(".player2College");
 var cardNewCollege3 = document.querySelector(".player3College");
 var cardNewCollege4 = document.querySelector(".player4College");
 let playerList = []
-let allStarList = [136, 382, 525, 265, 126, 548, 124, 314, 189, 215, 432, 383, 279, 319, 347, 415, 64, 192, 840, 1487, 227, 463, 71, 544, 45, 538, 882, 86, 724, 20, 361, 441, 456, 761, 1046, 153, 261, 159, 481, 458]
+let allStarList = [136, 382, 525, 265, 126, 548, 124, 314, 189, 215, 432, 383, 279, 319, 347, 415, 64, 192, 840, 1487, 227, 463, 71, 544, 45, 538, 882, 86, 724, 20, 361, 441, 456, 761, 1046, 153, 261, 159, 481, 458, ]
 console.log(allStarList);
 var stars1 = [{}]
 var stars2 = [{}]
@@ -35,14 +37,14 @@ let games = [{
 {
 	gameID: 2,
 	date: "May 18th, 2021",
-	id1: 11,
-	id2: 17
+	id1: 17,
+	id2: 11
 },
 {
 	gameID: 3,
 	date: "May 18th, 2021",
-	id1: 16,
-	id2: 8
+	id1: 8,
+	id2: 16
 },
 {
 	gameID: 4,
@@ -253,6 +255,8 @@ function displayDetails(){
 	cardNewName2.innerHTML = `${stars1[1].firstName} ${stars1[1].lastName}`
 	cardNewCollege1.innerHTML = `College: ${stars1[0].collegeName}`
 	cardNewCollege2.innerHTML = `College: ${stars1[1].collegeName}`
+	voteNewName1.innerHTML = `${stars1[0].firstName} ${stars1[0].lastName}`
+	voteNewName2.innerHTML = `${stars1[1].firstName} ${stars1[1].lastName}`
 	console.log(cardNewName2);
 	console.log(cardNewLogo1)
 	console.log(cardNewImage1)
@@ -303,7 +307,6 @@ function displayDetails(){
 
 	console.log("stars", stars2);
 	console.log(stars2)
-	console.log(stars2[i].playerId);
 
 
 	console.log(team2PlayerList);
